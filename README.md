@@ -39,14 +39,21 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
 - [ ] Mention two parts of Express that you learned about this week.
+Two parts of Express we learned about this week: 
+    Routing: the ability to dynamicaly decide which handler functions are run based on the request that comes in to the server. This also this also allows us to break our code into smaller componenets like we might do in react. 
+    Convienience Helpers: functionality out of the box to handle requests and responses easily.
 
 - [ ] Describe Middleware?
+Functions that are called  in between receiving a request and sending a response. There are many types of middleware and we can use in our apllications. There is middleware native to express, 3rd party middleware on npm, or our own custom middleware. We might do this to edit the text in the request, verify authentication, etc.
 
 - [ ] Describe a Resource?
+A resource is data on a database. This might be a list of users, posts, etc. Anyhting that the client may need in receiving their UI accordingly.
 
 - [ ] What can the API return to help clients know if a request was successful?
+An API can return a status code indicating the request was successul. Typically these are in the 200 level with 200 itself being the most general successfull response code.
 
 - [ ] How can we partition our application into sub-applications?
+We can partition our application by breaking off certain request endpoints into their own files and route to them occordingly. For example having all requests to /users/ in its own file and all requests to /posts/ in their own file. This can be done for any other endpoints our application might need. This makes for much better readablity of code.
 
 ## Minimum Viable Product
 
