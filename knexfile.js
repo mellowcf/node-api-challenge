@@ -1,38 +1,12 @@
 module.exports = {
-    development: {
-        client: "sqlite3",
-        useNullAsDefault: true,
-        connection: {
-            filename: "./data/lambda.db3",
-        },
-        pool: {
-            afterCreate: (conn, done) => {
-                conn.run("PRAGMA foreign_keys = ON", done);
-            },
-        },
-        migrations: {
-            directory: "./data/migrations",
-        },
-        seeds: {
-            directory: "./data/seeds",
-        },
+  development: {
+    client: 'sqlite3',
+    connection: { filename: './data/lambda.sqlite3' },
+    useNullAsDefault: true,
+    migrations: {
+      directory: './data/migrations',
+      tableName: 'dbmigrations',
     },
-    production: {
-        client: "sqlite3",
-        useNullAsDefault: true,
-        connection: {
-            filename: "./data/lambda.db3",
-        },
-        pool: {
-            afterCreate: (conn, done) => {
-                conn.run("PRAGMA foreign_keys = ON", done);
-            },
-        },
-        migrations: {
-            directory: "./data/migrations",
-        },
-        seeds: {
-            directory: "./data/seeds",
-        },
-    },
+    seeds: { directory: './data/seeds' },
+  },
 };
